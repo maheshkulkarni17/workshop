@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+class Movie
+{
+    // Access specifier
+    public:
+
+        // Data Members
+    string movieName;
+    double adultTicketPrice;
+    double childTicketPrice;
+
+
+
+    Movie()
+    {
+        movieName = "";
+        adultTicketPrice = 0;
+        childTicketPrice = 0;
+    }
+
+    Movie(string movieName1, double adultTicketPrice1, double childTicketPrice1)
+    {
+        movieName = movieName1;
+        adultTicketPrice =adultTicketPrice1;
+        childTicketPrice =childTicketPrice1;
+    }
+
+
+
+
+    // Member Functions()
+    void printMovieName()
+    {
+       cout << "Movie name is: " << movieName<<endl;
+       cout << "Adult ticket price: " << adultTicketPrice<<endl;
+       cout << "child ticket price" << childTicketPrice<<endl;
+    }
+};
+
+int main()
+{
+    Movie m1;
+
+    m1.printMovieName();
+
+    m1.movieName = "RRR";
+    m1.adultTicketPrice = 200;
+    m1.childTicketPrice = 100;
+
+     m1.printMovieName();
+
+    Movie m2("Thor",400,200);
+
+    m2.printMovieName();
+
+    int 	noOfAdultTicketsSold = 5; //200*5
+    int 	noOfChildTicketsSold = 10; //100*5
+    double percentDonation =10.0;
+    double grossAmount = (m1.adultTicketPrice * noOfAdultTicketsSold) + (m1.childTicketPrice * noOfChildTicketsSold) ;
+
+    cout<<"For Movie RRR"<<endl;
+    cout<<"Gross amount = "<<grossAmount<<endl;
+    double amountDonated  = grossAmount * percentDonation /100;
+
+    cout<<"amountDonated = "<<amountDonated<<endl;
+    double netSaleAmount = grossAmount - amountDonated ;
+    cout<<"netSaleAmount = "<<netSaleAmount<<endl;
+
+
+	return 0;
+}
