@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+class Student
+{
+	// Access specifier
+	public:
+
+	// Data Members
+	string name;
+
+	// Member Functions()
+	void printname()
+	{
+	cout << "Student name is: " << name<<endl;
+	}
+};
+
+int main() {
+
+	// Declare an object of class geeks
+	Student obj1;
+	Student obj2;
+
+	obj2.name="Sid";
+
+	// accessing data member
+	obj1.name = "Abhi";
+
+	// accessing member function
+	obj1.printname();
+	obj2.printname();
+	return 0;
+}
