@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+   int arr[5] = {3,5,7,34,2};
+   int max = arr[0];
+   for(int i = 0;i < 5;i++) {
+        if(max < arr[i]) {
+            max = arr[i];
+        }
+    }
+    printf("Largest number is = %d",max);
+    return 0;
+}
