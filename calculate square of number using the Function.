@@ -1,0 +1,15 @@
+#include<stdio.h>
+int square(int a); //declaration
+int main()
+{
+    int number,sq=0;
+    printf("Please Enter any integer Value : ");
+    scanf("%d", &number);
+    sq = square(number);
+    printf("square of a given number %d is = %d", number, sq);
+    return 0;
+}
+int square(int a) //definition
+{
+   return a*a;
+}
