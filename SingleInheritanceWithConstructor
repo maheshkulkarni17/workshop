@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+class Person
+{
+public:
+    Person()
+    {
+        cout<<"Constructor is called of Person class";
+    }
+    ~Person()
+    {
+        cout<<"Destructor is called of Person class";
+    }
+
+};
+
+class Student: public Person
+{
+
+//Student class object will invoke default constructor and destructor of the base class
+};
+int main()
+{
+
+    Student s1;
+
+    return 0;
+}
+
