@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class Vehicle
+{
+public:
+    Vehicle()
+    {
+        cout<<"Constructor of Vehicle Class"<<endl;
+    }
+    int capacity;
+
+};
+class FourWheeler: public Vehicle
+{
+public:
+    int noOfWheels;
+    FourWheeler()
+    {
+       cout<<"Constructor of FourWheeler Class"<<endl;
+    }
+};
+
+class Car : public FourWheeler
+{
+public:
+    void showCapacity()
+    {
+        capacity=6;
+        noOfWheels=4;
+        cout<<"Capacity of Vehicle Class "<<capacity<<endl;
+        cout<<"Car has this many wheels "<<noOfWheels<<endl;
+    }
+
+};
+
+int main()
+{
+    Car c1;
+    c1.showCapacity();
+    return 0;
+}
