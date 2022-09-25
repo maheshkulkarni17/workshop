@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+class Vehicle
+{
+public:
+    Vehicle()
+    {
+        cout<<"Constructor of Vehicle Class"<<endl;
+    }
+    int capacity;
+
+};
+class FourWheeler
+{
+public:
+    int noOfWheels;
+    FourWheeler()
+    {
+        noOfWheels=4;
+       cout<<"Constructor of FourWheeler Class"<<endl;
+    }
+    void showWheels()
+    {
+       cout<<"No of Wheels are "<<noOfWheels<<endl;
+    }
+};
+
+class Car : public Vehicle
+{
+public:
+    Car()
+    {
+         cout<<"Constructor of Car Class"<<endl;
+
+    }
+    void showCapacity()
+    {
+        capacity=6;
+        cout<<"Capacity of Vehicle Class =  "<<capacity<<endl;
+    }
+
+};
+
+class BMW:public Car, public FourWheeler
+{
+public:
+
+    void ShowBMW()
+    {
+        showCapacity();
+        showWheels();
+    }
+
+};
+
+int main()
+{
+    BMW b1;
+    b1.ShowBMW();
+    return 0;
+}
