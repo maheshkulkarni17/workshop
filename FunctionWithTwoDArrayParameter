@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+void add(int a[3][3],int b[3][3]);
+int main()
+{
+    int a[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    int b[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+
+    add(a,b);
+	return 0;
+}
+void add(int a[3][3],int b[3][3])
+{
+    cout<<"Addition = "<<endl;
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            cout<<" "<<(a[i][j]+b[i][j]);
+        }
+
+        cout<<endl;
+
+    }
+
+
+
+}
+
+
