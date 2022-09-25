@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+class Person
+{
+    //Data Members
+    public :
+    int uid;
+    //Member Function
+    void setUid()
+    {
+        uid=1;
+    }
+
+    void display()
+    {
+        cout<<"Uid is "<<uid<<endl;
+    }
+
+
+
+};
+class Student: public Person
+{
+
+public:
+    string name;
+
+    void setName(string name1)
+    {
+        setUid(); // accessing member functions of base class
+        name = name1;
+
+    }
+
+    void displayName()
+    {
+        cout<<"The name is "<<name<<endl;
+        display(); // accessing member functions of base class
+    }
+
+
+
+
+};
+
+int main()
+{
+    Student s1;
+    s1.setName("Sid");
+    s1.displayName();
+    return 0;
+}
+
