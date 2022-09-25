@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+class BaseClass
+{
+public:
+    virtual void display() // indicating compiler that we are overriding this method in derived class //one form of display
+    {
+        cout<<"this is Base Class Method"<<endl;
+    }
+};
+class DerivedClass: public BaseClass
+{
+public:
+    void display()//another form of display
+    {
+        cout<<"this is Derived Class Method"<<endl;
+    }
+
+};
+int main()
+{
+    //Function overloading - same name  and diff arguments (diff datatype)
+    //add(int a,int b);
+    //add(int a,int b,int c);
+    //Function Overriding - same name and same parameters(same datatype)
+     DerivedClass d1;
+     BaseClass &b1=d1;
+    b1.display();
+
+
+    //Polymorphism -  Many Forms - 4 th pillar OOP
+
+
+
+    return 0;
+}
